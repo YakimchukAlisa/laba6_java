@@ -91,23 +91,24 @@ public class Pacman {
         points += p;
     }
 
-    public void move(Map map, Food smallFood, Food bigFood, Fruit fruit) {
-        if (Keyboard.isKeyPressed(Keyboard.Key.UP) && map.getTile(nextY - 1, nextX).getIsPassable() && !(nextY == 17 && nextX == 0 || nextY == 17 && nextX == map.getW() - 1)) {
+    public void move(Map map, Food smallFood, Food bigFood, Fruit fruit, InputManager inputManager) {
+        int direction = inputManager.getDirection();
+        if (direction==0 && map.getTile(nextY - 1, nextX).getIsPassable() && !(nextY == 17 && nextX == 0 || nextY == 17 && nextX == map.getW() - 1)) {
             nextDirection = 0;
             nextX = x;
             nextY = y;
         }
-        if (Keyboard.isKeyPressed(Keyboard.Key.DOWN) && map.getTile(nextY + 1, nextX).getIsPassable() && !(nextY == 17 && nextX == 0 || nextY == 17 && nextX == map.getW() - 1)) {
+        if (direction==1 && map.getTile(nextY + 1, nextX).getIsPassable() && !(nextY == 17 && nextX == 0 || nextY == 17 && nextX == map.getW() - 1)) {
             nextDirection = 1;
             nextX = x;
             nextY = y;
         }
-        if (Keyboard.isKeyPressed(Keyboard.Key.LEFT) && (map.getTile(nextY, nextX - 1).getIsPassable())) {
+        if (direction==2 && (map.getTile(nextY, nextX - 1).getIsPassable())) {
             nextDirection = 2;
             nextX = x;
             nextY = y;
         }
-        if (Keyboard.isKeyPressed(Keyboard.Key.RIGHT) && (map.getTile(nextY, nextX + 1).getIsPassable())) {
+        if (direction==3 && (map.getTile(nextY, nextX + 1).getIsPassable())) {
             nextDirection = 3;
             nextX = x;
             nextY = y;

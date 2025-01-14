@@ -13,6 +13,7 @@ import java.io.InputStream;
 public class Main {
     public static void main(String[] args) {
         Game game = new Game();
+        InputManager inputManager = new KeyboardInput();
         Food smallFood = new Food(242, 5, 'o');
         Food bigFood = new Food(4, 10, 'O');
         Map map = new Map(35, 30);
@@ -208,7 +209,7 @@ public class Main {
                 pacman.updateMaxPoints(pacman.getPoints());
 
             } else {
-                pacman.move(map, smallFood, bigFood, fruitArray[randFruit]);
+                pacman.move(map, smallFood, bigFood, fruitArray[randFruit], inputManager);
                 blinky.blinkyMove(pacman, map, settings, window);
                 pinky.move(pacman, map, settings, window, smallFood);
                 inky.inkyMove(pacman, map, blinky, settings, window);
