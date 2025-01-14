@@ -45,4 +45,12 @@ public class Food {
         count--;
         totalFoodCount--;
     }
+
+
+    // Переопределение метода toString для вывода (лучший вариант)
+    @Override
+    public String toString() {
+        return "Food: count=" + count + ", point=" + point + ", type=" + type;
+    }
+
 }

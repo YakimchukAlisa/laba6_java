@@ -46,5 +46,10 @@ public class Fruit {
             map.setTile(y, x, newTile);
         }
     }
-};
+    // Переопределение метода toString для вывода
+    @Override
+    public String toString() {
+        return "Fruit: x=" + x + ", y=" + y + ", points=" + points + ", isActive=" + isActive;
+    }
+}
 

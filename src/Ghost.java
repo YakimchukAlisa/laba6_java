@@ -136,4 +136,9 @@ public class Ghost {
         if (lastDirection != direction && change == 1)
             lastDirection = direction;
     }
+    // Переопределение метода toString для вывода
+    @Override
+    public String toString() {
+        return "Ghost: x=" + x + ", y=" + y + ", score=" + score + ", direction=" + direction + ", lastDirection=" + lastDirection;
+    }
 }

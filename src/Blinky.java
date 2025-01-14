@@ -3,18 +3,8 @@ import org.jsfml.system.Vector2f;
 
 public class Blinky extends Ghost {
 
-    private int x;
-    private int y;
-    private int score;
-    private int direction;
-    private int lastDirection;
-    private Color color;
 
     public Blinky() {
-    }
-
-    public Color getColor() {
-        return color;
     }
 
     public Blinky(int x, int y, int score, int direction, int lastDirection, Color color) {

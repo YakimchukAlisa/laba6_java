@@ -110,4 +110,14 @@ public String getWindowTitle() {
     public Color getClydeColor() {
         return clydeColor;
     }
+
+    // Переопределение метода toString для вывода
+    @Override
+    public String toString() {
+        return "Window Title: " + windowTitle + "\n" +
+                "Grid Size: " + gridSize + "\n" +
+                "Pacman Start X: " + pacmanStartX + "\n" +
+                "Pacman Start Y: " + pacmanStartY + "\n";
+    }
+
 }

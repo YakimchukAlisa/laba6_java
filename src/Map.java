@@ -87,44 +87,56 @@ public class Map {
                 maze.get(i).set(j, new Tile(tileChar));
             }
 
-    }
         }
+    }
 
-        public void mazePaint(GameSettings settings, RenderWindow window, Food smallFood, Food bigFood, Sprite fruitShape) {
-            RectangleShape square = new RectangleShape(new Vector2f(settings.getGridSize(), settings.getGridSize()));
-            square.setFillColor(settings.getSquareColor());
+    public void mazePaint(GameSettings settings, RenderWindow window, Food smallFood, Food bigFood, Sprite fruitShape) {
+        RectangleShape square = new RectangleShape(new Vector2f(settings.getGridSize(), settings.getGridSize()));
+        square.setFillColor(settings.getSquareColor());
 
-            CircleShape smallCircle = new CircleShape(3);
-            smallCircle.setFillColor(settings.getSmallCircleColor());
+        CircleShape smallCircle = new CircleShape(3);
+        smallCircle.setFillColor(settings.getSmallCircleColor());
 
-            CircleShape bigCircle = new CircleShape(6);
-            bigCircle.setFillColor(settings.getBigCircleColor());
+        CircleShape bigCircle = new CircleShape(6);
+        bigCircle.setFillColor(settings.getBigCircleColor());
 
-            RectangleShape pacman = new RectangleShape(new Vector2f(settings.getGridSize(), settings.getGridSize()));
-            pacman.setFillColor(settings.getPacmanColor());
+        RectangleShape pacman = new RectangleShape(new Vector2f(settings.getGridSize(), settings.getGridSize()));
+        pacman.setFillColor(settings.getPacmanColor());
 
-            for (int i = 0; i < H; i++) {
-                for (int j = 0; j < W; j++) {
-                    char tile = maze.get(i).get(j).getType();
+        for (int i = 0; i < H; i++) {
+            for (int j = 0; j < W; j++) {
+                char tile = maze.get(i).get(j).getType();
 
-                    if (tile == 'X') {
-                        square.setPosition(j * settings.getGridSize(), i * settings.getGridSize());
-                        window.draw(square);
-                    } else if (tile == smallFood.getType()) {
-                        smallCircle.setPosition(j * settings.getGridSize() + 8.5f, i * settings.getGridSize() + 8.5f);
-                        window.draw(smallCircle);
-                    } else if (tile == bigFood.getType()) {
-                        bigCircle.setPosition(j * settings.getGridSize() + 5.5f, i * settings.getGridSize() + 5.5f);
-                        window.draw(bigCircle);
-                    } else if (tile == 'P') {
-                        pacman.setPosition(j * settings.getGridSize(), i * settings.getGridSize());
-                        window.draw(pacman);
-                    }
-                    else if (tile == 'F')
-                    {
-                        window.draw(fruitShape);
-                    }
+                if (tile == 'X') {
+                    square.setPosition(j * settings.getGridSize(), i * settings.getGridSize());
+                    window.draw(square);
+                } else if (tile == smallFood.getType()) {
+                    smallCircle.setPosition(j * settings.getGridSize() + 8.5f, i * settings.getGridSize() + 8.5f);
+                    window.draw(smallCircle);
+                } else if (tile == bigFood.getType()) {
+                    bigCircle.setPosition(j * settings.getGridSize() + 5.5f, i * settings.getGridSize() + 5.5f);
+                    window.draw(bigCircle);
+                } else if (tile == 'P') {
+                    pacman.setPosition(j * settings.getGridSize(), i * settings.getGridSize());
+                    window.draw(pacman);
+                } else if (tile == 'F') {
+                    window.draw(fruitShape);
                 }
             }
         }
     }
+
+    // Переопределение метода toString для вывода
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Map: H=").append(H).append(", W=").append(W).append("\n");
+        for (List<Tile> row : maze) {
+            for (Tile tile : row) {
+                sb.append(tile.getType());
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+}

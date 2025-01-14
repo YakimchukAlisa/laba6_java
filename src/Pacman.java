@@ -177,5 +177,12 @@ public class Pacman {
         resultWrapper.setResult(f);
         return resultWrapper;
     }
+
+    // Переопределение метода toString для вывода
+    @Override
+    public String toString() {
+        return "Pacman: x=" + x + ", y=" + y + ", score=" + score + ", lives=" + lives + ", points=" + points;
+    }
+
 }
 

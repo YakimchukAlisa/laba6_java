@@ -29,4 +29,10 @@ public class Tile {
     public void setIsPassable(boolean isPassable) {
         this.isPassable = isPassable;
     }
+
+    // Переопределение метода toString для вывода
+    @Override
+    public String toString() {
+        return "Type: " + type + ", Passable: " + (isPassable ? "true" : "false");
+    }
 }

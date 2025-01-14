@@ -170,6 +170,10 @@ public class Main {
 
         RenderWindow window = new RenderWindow(new VideoMode(settings.getGridSize() * map.getW(), settings.getGridSize() * map.getH()), settings.getWindowTitle());
 
+        System.out.println("Настройки: \n" + settings + "\n");
+        System.out.println("Карта: \n" + map + "\n");
+        System.out.println("Пакман: " + pacman + "\n");
+
         while (window.isOpen()) {
             Event event;
             while ((event = window.pollEvent()) != null) { // Получаем событие (если есть)
