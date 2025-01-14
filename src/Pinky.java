@@ -3,18 +3,7 @@ import org.jsfml.graphics.RenderWindow;
 
 public class Pinky extends Ghost {
 
-    private int x;
-    private int y;
-    private int score;
-    private int direction;
-    private int lastDirection;
-    private Color color;
-
     public Pinky() {
-    }
-
-    public Color getColor() {
-        return color;
     }
 
     public Pinky(int x, int y, int score, int direction, int lastDirection, Color color) {

@@ -5,8 +5,8 @@ import org.jsfml.system.Vector2f;
 import static java.lang.Double.POSITIVE_INFINITY;
 
 public class Ghost {
-    private int x;
-    private int y;
+    protected int x;
+    protected int y;
     private int score;
     private int direction;
     private int lastDirection;

@@ -3,18 +3,7 @@ import org.jsfml.graphics.RenderWindow;
 
 public class Clyde extends Ghost {
 
-    private int x;
-    private int y;
-    private int score;
-    private int direction;
-    private int lastDirection;
-    private Color color;
-
     public Clyde() {
-    }
-
-    public Color getColor() {
-        return color;
     }
 
     public Clyde(int x, int y, int score, int direction, int lastDirection, Color color) {
@@ -23,7 +12,7 @@ public class Clyde extends Ghost {
 
     public void clydeMove(Pacman pacman, Map map, GameSettings settings, RenderWindow window) {
         int a, b;
-        float mainDistance = distance(pacman.getX(), pacman.getY(), getX(), getY());
+        float mainDistance = distance(pacman.getX(), pacman.getY(), x, y);
         if (mainDistance > 8) {
             a = pacman.getX();
             b = pacman.getY();

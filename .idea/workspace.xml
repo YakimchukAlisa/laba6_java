@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="928987e9-4ceb-4e7b-bf4d-75680dd64250" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laba6_java.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laba6_java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/laba6_java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/laba6_java/Clyde.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/laba6_java/Clyde.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/laba6_java/Ghost.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/laba6_java/Ghost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/laba6_java/Inky.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/laba6_java/Inky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/laba6_java/Pinky.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/laba6_java/Pinky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clyde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clyde.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ghost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pinky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pinky.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "YakimchukAlisa"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/YakimchukAlisa/laba6_java.git",
+    "accountId": "f057e4be-7599-45cf-9809-cc25afedc506"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -27,12 +50,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/79231/OneDrive/Рабочий стол/laba6_java/.idea/libraries/jsfml-test-Dec02_2013",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
@@ -57,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1736844331857</updated>
       <workItem from="1736844333164" duration="4000" />
-      <workItem from="1736845352109" duration="41000" />
+      <workItem from="1736845352109" duration="3286000" />
     </task>
     <servers />
   </component>

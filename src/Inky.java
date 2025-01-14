@@ -3,19 +3,10 @@ import org.jsfml.graphics.RenderWindow;
 
 public class Inky extends Ghost {
 
-    private int x;
-    private int y;
-    private int score;
-    private int direction;
-    private int lastDirection;
-    private Color color;
 
     public Inky() {
     }
 
-    public Color getColor() {
-        return color;
-    }
 
     public Inky(int x, int y, int score, int direction, int lastDirection, Color color) {
         super(x, y, score, direction, lastDirection, color);
