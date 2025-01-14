@@ -183,7 +183,7 @@ public class Main {
 
             if (!fruitArray[0].getIsActive())
             {
-                randFruit = random.nextInt(1)+1;
+                randFruit = random.nextInt(4);
             }
 
             window.clear(Color.BLACK);
@@ -206,7 +206,7 @@ public class Main {
             } else {
                 pacman.move(map, smallFood, bigFood, fruitArray[randFruit]);
                 blinky.blinkyMove(pacman, map, settings, window);
-                pinky.pinkyMove(pacman, map, settings, window);
+                pinky.move(pacman, map, settings, window, smallFood);
                 inky.inkyMove(pacman, map, blinky, settings, window);
                 clyde.clydeMove(pacman, map, settings, window);
 

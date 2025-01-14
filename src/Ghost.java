@@ -7,9 +7,9 @@ import static java.lang.Double.POSITIVE_INFINITY;
 public class Ghost {
     protected int x;
     protected int y;
-    private int score;
-    private int direction;
-    private int lastDirection;
+    protected int score;
+    protected int direction;
+    protected int lastDirection;
     private Color color;
 
     public Ghost() {
