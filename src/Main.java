@@ -20,11 +20,11 @@ public class Main {
 
         GameSettings[] settingsArray = new GameSettings[2];
         settingsArray[0] = new GameSettings("Pac-Man 1", 25, -14, 26, Color.YELLOW, Color.BLUE, Color.WHITE, Color.WHITE, Color.RED, new Color(255, 185, 193),
-                Color.CYAN, new Color(255, 165, 0));
+                Color.CYAN, new Color(255, 165, 0), new StringBuilder("OriginalName"));
         settingsArray[1] = new GameSettings("Pac-Man 2", 25, -14, 8, new Color(255, 255, 153), new Color(100, 149, 247), new Color(255, 245, 238),
-                new Color(255, 228, 225), new Color(220, 20, 60), new Color(255, 105, 180), new Color(176, 234, 240), new Color(255, 140, 0));
+                new Color(255, 228, 225), new Color(220, 20, 60), new Color(255, 105, 180), new Color(176, 234, 240), new Color(255, 140, 0), new StringBuilder("Original Name"));
         Random random = new Random();
-        GameSettings settings = settingsArray[random.nextInt(1)];
+         GameSettings settings = settingsArray[random.nextInt(1)];
         map.createMap();
         Pacman pacman = new Pacman(settings.getPacmanStartX(), settings.getPacmanStartY(), settings.getPacmanStartX(), settings.getPacmanStartY(), 0, 3, 3, 0);
 
@@ -171,6 +171,36 @@ public class Main {
 
         RenderWindow window = new RenderWindow(new VideoMode(settings.getGridSize() * map.getW(), settings.getGridSize() * map.getH()), settings.getWindowTitle());
 
+        //мелкое клонирование
+        try {
+            GameSettings shallowClone = settings.clone();
+            System.out.println("Исходный name: " + settings.getName());
+            System.out.println("Клон name: " + shallowClone.getName());
+
+            // Изменим name в клоне
+            shallowClone.getName().append(" - Cloned");
+
+            System.out.println("Исходный name после изменения клона: " + settings.getName());
+            System.out.println("Клон name после изменения клона: " + shallowClone.getName());
+        } catch (CloneNotSupportedException e) {
+            System.err.println("Ошибка клонирования: " + e.getMessage());
+        }
+
+
+        //глубокое клонирование
+        try {
+            GameSettings deepClone = settings.deepClone();
+            System.out.println("\nИсходный name: " + settings.getName());
+            System.out.println("Клон name: " + deepClone.getName());
+
+            // Изменим name в клоне
+            deepClone.getName().append(" - Cloned");
+
+            System.out.println("Исходный name после изменения клона: " + settings.getName());
+            System.out.println("Клон name после изменения клона: " + deepClone.getName());
+        } catch (CloneNotSupportedException e) {
+            System.err.println("Ошибка клонирования: " + e.getMessage());
+        }
 
         while (window.isOpen()) {
             Event event;

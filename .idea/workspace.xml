@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/laba6_java/GameSettings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/laba6_java/GameSettings.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/laba6_java/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/laba6_java/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameSettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KeyboardInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/KeyboardInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +88,7 @@
       <workItem from="1736844333164" duration="4000" />
       <workItem from="1736845352109" duration="16632000" />
       <workItem from="1736868985614" duration="5463000" />
-      <workItem from="1736911006255" duration="1713000" />
+      <workItem from="1736911006255" duration="11381000" />
     </task>
     <task id="LOCAL-00001" summary="модификатор protected">
       <option name="closed" value="true" />
@@ -123,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736862366078</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="использование интерфейсов">
+      <option name="closed" value="true" />
+      <created>1736912830453</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736912830453</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,5 +142,17 @@
     <MESSAGE value="метод toString" />
     <MESSAGE value="использование интерфейсов" />
     <option name="LAST_COMMIT_MESSAGE" value="использование интерфейсов" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/GameSettings.java</url>
+          <line>8</line>
+          <properties field="pacmanColor" class="GameSettings" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

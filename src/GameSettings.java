@@ -1,4 +1,8 @@
+
 import org.jsfml.graphics.Color;
+
+import java.util.Objects;
+
 
 public class GameSettings implements Cloneable {
     private String windowTitle;
@@ -13,6 +17,7 @@ public class GameSettings implements Cloneable {
     private int gridSize;
     private int pacmanStartX;
     private int pacmanStartY;
+    private StringBuilder name;
 
     public GameSettings() {
     }
@@ -22,7 +27,7 @@ public class GameSettings implements Cloneable {
                         int pacmanStartX, int pacmanStartY,
                         Color pacmanColor, Color squareColor, Color smallCircleColor,
                         Color bigCircleColor, Color blinkyColor, Color pinkyColor,
-                        Color inkyColor, Color clydeColor) {
+                        Color inkyColor, Color clydeColor, StringBuilder name) {
         this.windowTitle = windowTitle;           //использование оператора this
         this.gridSize = gridSize;
         this.pacmanStartX = pacmanStartX;
@@ -35,6 +40,7 @@ public class GameSettings implements Cloneable {
         this.pinkyColor = pinkyColor;
         this.inkyColor = inkyColor;
         this.clydeColor = clydeColor;
+        this.name=name;
 
 
         try {
@@ -60,6 +66,18 @@ public class GameSettings implements Cloneable {
             this.pacmanStartX = 14;
             this.pacmanStartY = 26;
         }
+    }
+
+    //метод для мелкого клонирования
+    public GameSettings clone() throws CloneNotSupportedException {
+        return (GameSettings) super.clone();
+    }
+
+   //метод для глубокого клонирования
+    public GameSettings deepClone() throws CloneNotSupportedException {
+        GameSettings clone = (GameSettings) super.clone();
+        clone.name = new StringBuilder(this.name.toString()); // Глубокая копия StringBuilder
+        return clone;
     }
 
 
@@ -111,32 +129,13 @@ public class GameSettings implements Cloneable {
         return clydeColor;
     }
 
+    public void setGridSize(int gridSize) {this.gridSize= gridSize;}
+
     public void setPacmanColor(Color color) {pacmanColor = color;}
 
-    // Мелкое клонирование (используется метод clone() по умолчанию)
-    @Override
-    public GameSettings clone() throws CloneNotSupportedException {
-        return (GameSettings) super.clone();
-    }
+    public StringBuilder getName() {return name;}
 
-    // Глубокое клонирование
-    public GameSettings deepClone() {
-        try {
-            GameSettings clonedSettings = (GameSettings) super.clone();
-            // Клонирование объектов Color
-            clonedSettings.pacmanColor = new Color(this.pacmanColor.r, this.pacmanColor.g, this.pacmanColor.b);
-            clonedSettings.squareColor = new Color(this.squareColor.r, this.squareColor.g, this.squareColor.b);
-            clonedSettings.smallCircleColor = new Color(this.smallCircleColor.r, this.smallCircleColor.g, this.smallCircleColor.b);
-            clonedSettings.bigCircleColor = new Color(this.bigCircleColor.r, this.bigCircleColor.g, this.bigCircleColor.b);
-            clonedSettings.blinkyColor = new Color(this.blinkyColor.r, this.blinkyColor.g, this.blinkyColor.b);
-            clonedSettings.pinkyColor = new Color(this.pinkyColor.r, this.pinkyColor.g, this.pinkyColor.b);
-            clonedSettings.inkyColor = new Color(this.inkyColor.r, this.inkyColor.g, this.inkyColor.b);
-            clonedSettings.clydeColor = new Color(this.clydeColor.r, this.clydeColor.g, this.clydeColor.b);
+    public void setName(StringBuilder name) {this.name = name;}
 
-            return clonedSettings;
-        } catch (CloneNotSupportedException e) {
-            // Этот Exception не должен возникать, так как мы реализуем Cloneable
-            throw new AssertionError("CloneNotSupportedException was unexpectedly thrown", e);
-        }
-    }
+
 }
