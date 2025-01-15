@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="928987e9-4ceb-4e7b-bf4d-75680dd64250" name="Changes" comment="клонирование">
+    <list default="true" id="928987e9-4ceb-4e7b-bf4d-75680dd64250" name="Changes" comment="абстрактный класс">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/laba6_java/GameSettings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/laba6_java/GameSettings.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/laba6_java/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/laba6_java/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameSettings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +89,7 @@
       <workItem from="1736845352109" duration="16632000" />
       <workItem from="1736868985614" duration="5463000" />
       <workItem from="1736911006255" duration="22539000" />
-      <workItem from="1736949114336" duration="794000" />
+      <workItem from="1736949114336" duration="2954000" />
     </task>
     <task id="LOCAL-00001" summary="модификатор protected">
       <option name="closed" value="true" />
@@ -138,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736936150595</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="абстрактный класс">
+      <option name="closed" value="true" />
+      <created>1736951744151</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1736951744151</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +159,8 @@
     <MESSAGE value="метод toString" />
     <MESSAGE value="использование интерфейсов" />
     <MESSAGE value="клонирование" />
-    <option name="LAST_COMMIT_MESSAGE" value="клонирование" />
+    <MESSAGE value="абстрактный класс" />
+    <option name="LAST_COMMIT_MESSAGE" value="абстрактный класс" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

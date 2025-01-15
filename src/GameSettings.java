@@ -23,16 +23,16 @@ public class GameSettings implements Cloneable {
     }
 
 
-    public GameSettings(String windowTitle, int gridSize,
-                        int pacmanStartX, int pacmanStartY,
-                        Color pacmanColor, Color squareColor, Color smallCircleColor,
-                        Color bigCircleColor, Color blinkyColor, Color pinkyColor,
-                        Color inkyColor, Color clydeColor, StringBuilder name) {
-        this.windowTitle = windowTitle;           //использование оператора this
+    public GameSettings(String title, int gridSize, int startX, int startY,
+                        GameObject<Color> pacmanColor, Color squareColor,
+                        Color smallCircleColor, Color bigCircleColor,
+                        Color blinkyColor, Color pinkyColor, Color inkyColor,
+                        Color clydeColor, StringBuilder name) {
+        this.windowTitle = title;
         this.gridSize = gridSize;
-        this.pacmanStartX = pacmanStartX;
-        this.pacmanStartY = pacmanStartY;
-        this.pacmanColor = pacmanColor;
+        this.pacmanStartX = startX;
+        this.pacmanStartY = startY;
+        this.pacmanColor = pacmanColor.getValue(); // Извлечение значения
         this.squareColor = squareColor;
         this.smallCircleColor = smallCircleColor;
         this.bigCircleColor = bigCircleColor;
@@ -40,7 +40,7 @@ public class GameSettings implements Cloneable {
         this.pinkyColor = pinkyColor;
         this.inkyColor = inkyColor;
         this.clydeColor = clydeColor;
-        this.name=name;
+        this.name = name;
 
 
         try {
