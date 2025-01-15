@@ -13,7 +13,7 @@ import java.io.InputStream;
 public class Main {
     public static void main(String[] args) {
         Game game = new Game();
-        InputManager inputManager = new KeyboardInput();
+        KeyboardInput inputmanager = new KeyboardInput();
         Food smallFood = new Food(242, 5, 'o');
         Food bigFood = new Food(4, 10, 'O');
         Map map = new Map(35, 30);
@@ -48,10 +48,10 @@ public class Main {
             }
             cherryTexture.loadFromStream(imageStream);
         }
-    catch (IOException e) {
-        System.err.println("Error: " + e.getMessage());
-        return; // Завершаем программу, если изображение не загружено
-    }
+        catch (IOException e) {
+            System.err.println("Error: " + e.getMessage());
+            return; // Завершаем программу, если изображение не загружено
+        }
         Sprite cherryShape = new Sprite();
         cherryShape.setTexture(cherryTexture);
         cherryShape.setScale(0.1f, 0.1f);
@@ -60,12 +60,12 @@ public class Main {
         Texture appleTexture = new Texture();
         try {
             if (imageStream == null) {
-                 throw new IOException("Image file not found.");
+                throw new IOException("Image file not found.");
             }
             appleTexture.loadFromStream(imageStream);
         }
         catch (IOException e) {
-             System.err.println("Error: " + e.getMessage());
+            System.err.println("Error: " + e.getMessage());
             return; // Завершаем программу, если изображение не загружено
         }
         Sprite appleShape = new Sprite();
@@ -171,9 +171,6 @@ public class Main {
 
         RenderWindow window = new RenderWindow(new VideoMode(settings.getGridSize() * map.getW(), settings.getGridSize() * map.getH()), settings.getWindowTitle());
 
-        System.out.println("Настройки: \n" + settings + "\n");
-        System.out.println("Карта: \n" + map + "\n");
-        System.out.println("Пакман: " + pacman + "\n");
 
         while (window.isOpen()) {
             Event event;
@@ -209,7 +206,7 @@ public class Main {
                 pacman.updateMaxPoints(pacman.getPoints());
 
             } else {
-                pacman.move(map, smallFood, bigFood, fruitArray[randFruit], inputManager);
+                pacman.move(map, smallFood, bigFood, fruitArray[randFruit], inputmanager);
                 blinky.blinkyMove(pacman, map, settings, window);
                 pinky.move(pacman, map, settings, window, smallFood);
                 inky.inkyMove(pacman, map, blinky, settings, window);

@@ -1,6 +1,6 @@
 import org.jsfml.window.Keyboard;
 
-// Класс для управления вводом с клавиатуры (W, A, S, D)
+// Класс для управления вводом W, A, S, D
 class KeyboardInput implements InputManager {
     @Override
     public int getDirection() {

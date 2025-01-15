@@ -1,6 +1,6 @@
 import org.jsfml.graphics.Color;
 
-public class GameSettings {
+public class GameSettings implements Cloneable {
     private String windowTitle;
     private Color pacmanColor;
     private Color squareColor;
@@ -63,7 +63,7 @@ public class GameSettings {
     }
 
 
-public String getWindowTitle() {
+    public String getWindowTitle() {
         return windowTitle;
     }
 
@@ -111,13 +111,32 @@ public String getWindowTitle() {
         return clydeColor;
     }
 
-    // Переопределение метода toString для вывода
+    public void setPacmanColor(Color color) {pacmanColor = color;}
+
+    // Мелкое клонирование (используется метод clone() по умолчанию)
     @Override
-    public String toString() {
-        return "Window Title: " + windowTitle + "\n" +
-                "Grid Size: " + gridSize + "\n" +
-                "Pacman Start X: " + pacmanStartX + "\n" +
-                "Pacman Start Y: " + pacmanStartY + "\n";
+    public GameSettings clone() throws CloneNotSupportedException {
+        return (GameSettings) super.clone();
     }
 
+    // Глубокое клонирование
+    public GameSettings deepClone() {
+        try {
+            GameSettings clonedSettings = (GameSettings) super.clone();
+            // Клонирование объектов Color
+            clonedSettings.pacmanColor = new Color(this.pacmanColor.r, this.pacmanColor.g, this.pacmanColor.b);
+            clonedSettings.squareColor = new Color(this.squareColor.r, this.squareColor.g, this.squareColor.b);
+            clonedSettings.smallCircleColor = new Color(this.smallCircleColor.r, this.smallCircleColor.g, this.smallCircleColor.b);
+            clonedSettings.bigCircleColor = new Color(this.bigCircleColor.r, this.bigCircleColor.g, this.bigCircleColor.b);
+            clonedSettings.blinkyColor = new Color(this.blinkyColor.r, this.blinkyColor.g, this.blinkyColor.b);
+            clonedSettings.pinkyColor = new Color(this.pinkyColor.r, this.pinkyColor.g, this.pinkyColor.b);
+            clonedSettings.inkyColor = new Color(this.inkyColor.r, this.inkyColor.g, this.inkyColor.b);
+            clonedSettings.clydeColor = new Color(this.clydeColor.r, this.clydeColor.g, this.clydeColor.b);
+
+            return clonedSettings;
+        } catch (CloneNotSupportedException e) {
+            // Этот Exception не должен возникать, так как мы реализуем Cloneable
+            throw new AssertionError("CloneNotSupportedException was unexpectedly thrown", e);
+        }
+    }
 }
